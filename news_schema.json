@@ -1,0 +1,24 @@
+{
+  "name": "search_stock_news",
+  "description": "جستجوی اخبار اینترنتی مرتبط با یک نماد بورسی ایران",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "symbol": {
+        "type": "string",
+        "description": "نماد بورسی ایران، مثلاً 'فولاد'"
+      },
+      "max_results": {
+        "type": "integer",
+        "description": "حداکثر تعداد خبرها",
+        "minimum": 1,
+        "maximum": 10,
+        "default": 5
+      }
+    },
+    "required": [
+      "symbol"
+    ],
+    "additionalProperties": false
+  }
+}
